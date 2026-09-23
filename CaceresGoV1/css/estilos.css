@@ -1,0 +1,147 @@
+/* Colores principales de la página. */
+:root {--ink:#102b2a; --forest:#174842; --lime:#d5ed75; --cream:#f8f5ed; --sand:#e9e2d3; --coral:#ee6b54; --muted:#71807c; --line:#d6dacf}
+* {box-sizing:border-box}
+body {margin:0; background:var(--cream); color:var(--ink); font-family:'DM Sans',sans-serif}
+button {font:inherit; cursor:pointer}
+a {text-decoration:none; color:inherit}
+.shell {max-width:1280px; margin:auto; padding:0 36px}
+.topbar {height:82px; display:flex; align-items:center; justify-content:space-between; border-bottom:1px solid rgba(16,43,42,.14)}
+.brand {font-weight:700; font-size:24px; letter-spacing:-1.4px}
+.brand i {font-family:'Playfair Display'; color:var(--coral); font-size:29px}
+.nav {display:flex; gap:27px; font-size:14px; font-weight:600}
+.nav a:first-child {color:var(--coral)}
+.profile {display:flex; align-items:center; gap:11px; font-size:14px; font-weight:600; border:0; background:none}
+.avatar {width:34px; height:34px; border-radius:50%; background:var(--lime); display:grid; place-items:center; font-size:16px}
+/* Portada y presentación de la aplicación. */
+.hero {padding:56px 0 42px; display:grid; grid-template-columns:1.05fr .95fr; gap:56px; align-items:center}
+.eyebrow {font:500 11px 'DM Mono'; letter-spacing:1.5px; text-transform:uppercase; color:var(--forest); display:flex; gap:9px; align-items:center}
+.eyebrow:before {content:''; width:28px; height:1px; background:var(--coral)}
+h1 {font:600 clamp(47px,6vw,81px)/.98 'Playfair Display'; letter-spacing:-4px; margin:17px 0 23px; max-width:625px}
+.hero h1 em {font-weight:600; color:var(--coral)}
+.lead {font-size:17px; line-height:1.55; max-width:455px; color:#536562; margin:0 0 29px}
+.actions {display:flex; align-items:center; gap:22px}
+.primary {border:0; background:var(--ink); color:white; padding:15px 21px; border-radius:3px; font-weight:700; font-size:14px}
+.primary:hover {background:var(--coral)}
+.text-link {font-size:14px; font-weight:700; text-decoration:underline; text-underline-offset:4px}
+/* Mapa y botón de ubicación. */
+.map-card {height:403px; border-radius:4px; overflow:hidden; position:relative; box-shadow:14px 14px 0 var(--sand)}
+#location-map {height:100%; width:100%}
+#location-map iframe {display:block; width:100%; height:100%; border:0}
+.locate-button {position:absolute; z-index:500; right:14px; top:14px; border:0; background:var(--ink); color:#fff; padding:11px 13px; font-size:12px; font-weight:700}
+.locate-button:hover {background:var(--coral)}
+.location-status {position:absolute; z-index:500; left:12px; bottom:12px; margin:0; padding:8px 10px; background:rgba(248,245,237,.94); font:11px 'DM Mono'; box-shadow:0 1px 6px rgba(0,0,0,.16)}
+.stats {border-top:1px solid var(--line); border-bottom:1px solid var(--line); display:grid; grid-template-columns:repeat(3,1fr); padding:23px 0; margin-bottom:70px}
+.stat {padding-left:25px; border-left:1px solid var(--line)}
+.stat:first-child {padding-left:0; border:0}
+.stat strong {display:block; font:600 28px 'Playfair Display'; letter-spacing:-1px}
+.stat span {font:12px 'DM Mono'; text-transform:uppercase; letter-spacing:.8px; color:var(--muted)}
+.section-head {display:flex; justify-content:space-between; align-items:flex-end; margin-bottom:25px}
+.section-head h2 {font:600 38px 'Playfair Display'; letter-spacing:-1.8px; margin:8px 0 0}
+.all-link {font-size:13px; font-weight:700; border-bottom:1px solid}
+/* Tarjetas de las rutas disponibles. */
+.routes {display:grid; grid-template-columns:1.3fr 1fr 1fr; gap:16px; margin-bottom:74px}
+.route {min-height:245px; padding:22px; position:relative; overflow:hidden; display:flex; flex-direction:column; justify-content:flex-end}
+.route.large {background:var(--forest); color:white}
+.route.sand {background:#e5cbb1}
+.route.lime {background:var(--lime)}
+.route .number {position:absolute; right:17px; top:12px; font:42px 'Playfair Display'; opacity:.25}
+.route h3 {font:600 27px/1.05 'Playfair Display'; margin:0 0 9px; letter-spacing:-1px}
+.route p {font-size:13px; margin:0; opacity:.76}
+.route-tag {position:absolute; top:21px; left:21px; font:10px 'DM Mono'; letter-spacing:.8px; text-transform:uppercase; border:1px solid currentColor; padding:5px 7px}
+.route-icon {position:absolute; right:18px; bottom:16px; font-size:36px; opacity:.75}
+/* Zona de progreso y ranking. */
+.dashboard {background:var(--ink); color:white; padding:63px 0}
+.dashboard .section-head h2 {color:var(--cream)}
+.dashboard .eyebrow {color:var(--lime)}
+.dash-grid {display:grid; grid-template-columns:1.15fr .85fr; gap:19px}
+.progress-card,.ranking {background:#f5f1e8; color:var(--ink); padding:25px}
+.progress-card h3,.ranking h3 {font:600 24px 'Playfair Display'; margin:0 0 18px; letter-spacing:-.8px}
+.route-progress {display:flex; justify-content:space-between; font-size:13px; font-weight:700; margin:16px 0 8px}
+.bar {height:8px; background:#d9dfd5; border-radius:10px; overflow:hidden}
+.bar span {display:block; height:100%; background:var(--coral); border-radius:10px}
+.checkpoints {display:flex; justify-content:space-between; margin-top:17px}
+.check {font:10px 'DM Mono'; text-align:center; color:#75817e}
+.check i {display:block; width:23px; height:23px; background:var(--forest); color:white; border-radius:50%; font:15px 'DM Sans'; margin:0 auto 5px}
+.check.pending i {background:#d9dfd5; color:#75817e}
+.ranking {background:var(--lime)}
+.rank {display:flex; align-items:center; gap:12px; padding:10px 0; border-top:1px solid rgba(16,43,42,.18); font-size:13px}
+.rank:first-of-type {border:0}
+.rank b {font:12px 'DM Mono'; width:15px}
+.rank span {flex:1; font-weight:700}
+.rank small {font:11px 'DM Mono'}
+.footer {padding:26px 0; color:#65726e; display:flex; justify-content:space-between; font-size:12px}
+.account-actions {display:flex; align-items:center; gap:12px}
+.logout-button {border:1px solid var(--coral); background:transparent; color:var(--coral); padding:8px 10px; font-size:12px; font-weight:700}
+.logout-button:hover {background:var(--coral); color:white}
+.auth-wall {background:#f5f1e8; color:var(--ink); padding:38px 25px; text-align:center; grid-column:1/-1}
+.access-label {display:inline-block; margin:0 auto 14px; padding:6px 10px; border:1px solid var(--coral); color:var(--coral); font:500 10px 'DM Mono'; letter-spacing:1px; text-transform:uppercase}
+.auth-wall h3 {font:600 26px 'Playfair Display'; margin:0 0 8px}
+.auth-wall p {font-size:14px; color:#61706c; margin:0 auto 19px; max-width:410px}
+.private-content {display:none}
+.private-content.visible {display:contents}
+.auth-wall.hidden {display:none}
+/* Ventanas que aparecen al validar una visita o iniciar sesión. */
+.modal {position:fixed; inset:0; background:rgba(10,28,27,.55); display:none; place-items:center; padding:20px; z-index:1000}
+.modal.open {display:grid}
+.dialog {position:relative; z-index:1001; background:var(--cream); width:min(430px,100%); padding:33px; text-align:center; box-shadow:10px 10px 0 var(--lime)}
+.qr {width:126px; height:126px; margin:18px auto; background:repeating-linear-gradient(90deg,#102b2a 0 8px,transparent 8px 14px),repeating-linear-gradient(#102b2a 0 7px,transparent 7px 12px); border:10px solid white}
+.dialog h2 {font:600 31px 'Playfair Display'; margin:0}
+.dialog p {font-size:14px; line-height:1.5; color:#60706c}
+.code-input,.auth-form input {width:100%; padding:13px; border:1px solid var(--line); background:white; font:14px 'DM Sans'}
+.code-input {text-align:center; letter-spacing:3px; text-transform:uppercase; margin:6px 0 12px}
+.close {background:none; border:0; text-decoration:underline; font-size:12px; margin-top:13px}
+.auth-dialog {text-align:left}
+.auth-dialog h2 {text-align:center}
+.auth-tabs {display:flex; margin:24px 0 18px; border-bottom:1px solid var(--line)}
+.auth-tab {flex:1; background:none; border:0; padding:10px; color:var(--muted); font-size:13px; font-weight:700}
+.auth-tab.active {color:var(--ink); border-bottom:3px solid var(--coral)}
+.auth-form {display:grid; gap:11px}
+.auth-form label {font-size:12px; font-weight:700}
+.form-message {min-height:18px; margin:2px 0 0; text-align:center; font-size:12px; color:var(--coral)}
+body.progress-view main>section:not(#progreso) {display:none}
+body.progress-view #progreso {min-height:calc(100vh - 82px); display:block}
+.routes {display:grid}
+.routes.visible {display:grid}
+.route-gate {display:none}
+body.route-view main>section:not(#rutas),body.ranking-view main>section:not(#progreso) {display:none}
+body.route-view #rutas,body.ranking-view #progreso {min-height:calc(100vh - 82px); display:block}
+body.ranking-view #progreso>.shell>.section-head,body.ranking-view #progreso #auth-wall,body.ranking-view #progreso #private-content {display:none}
+body.ranking-view #ranking {display:block; max-width:640px; margin:0 auto}
+body.progress-view #ranking {display:none}
+#perfil {display:none}
+body.profile-view main>section:not(#perfil) {display:none}
+body.profile-view #perfil {display:block; min-height:calc(100vh - 82px); padding-top:70px}
+.profile-page h2 {font:600 42px 'Playfair Display'; margin:12px 0 30px}
+.profile-data {max-width:650px; background:#f5f1e8; padding:8px 24px; margin-bottom:25px}
+.profile-row {display:flex; justify-content:space-between; gap:20px; padding:19px 0; border-bottom:1px solid var(--line)}
+.profile-row:last-child {border-bottom:0}
+.profile-row span {color:var(--muted); font-size:13px}
+.profile-row strong {font-size:14px}
+.profile-edit {max-width:650px; background:#f5f1e8; padding:24px; margin-bottom:24px; display:grid; gap:9px}
+.profile-edit h3 {font:600 24px 'Playfair Display'; margin:0 0 8px}
+.profile-edit label {font-size:12px; font-weight:700}
+.profile-edit input {width:100%; padding:12px; border:1px solid var(--line); font:14px 'DM Sans'}
+.profile-message {min-height:18px; color:var(--coral); font-size:12px; margin:0; text-align:center}
+/* Botón y mensaje que aparecen al leer el QR de una ruta. */
+.scan-route-button {margin-top:24px}
+.route-message {text-align:center; font-size:12px; color:var(--coral)}
+.start-route-button {align-self:flex-start; margin-top:16px; border:1px solid currentColor; background:transparent; color:inherit; padding:9px 11px; font-size:12px; font-weight:700}
+.start-route-button:hover,.route.active-route .start-route-button {background:var(--coral); border-color:var(--coral); color:white}
+.active-route-message {font-size:13px; color:var(--coral); font-weight:700; margin:16px 0 0}
+@media(max-width:760px) {.shell {padding:0 20px}
+.nav {display:none}
+.hero {grid-template-columns:1fr; gap:32px; padding-top:36px}
+.map-card {height:310px}
+.stats {margin-bottom:47px}
+.stat {padding-left:13px}
+.stat strong {font-size:23px}
+.routes,.dash-grid {grid-template-columns:1fr}
+.route {min-height:190px}
+.route.large {min-height:240px}
+.dashboard {padding:46px 0}
+.footer {gap:10px; flex-direction:column}
+.scan-route-button {width:100%}
+.dialog input {font-size:16px}
+h1 {letter-spacing:-2.5px}
+.section-head h2 {font-size:33px}
+}
